@@ -10,10 +10,11 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#2563eb',
-                        'primary-dark': '#1d4ed8',
-                        'secondary': '#10b981',
-                        'accent': '#f59e0b',
+                        'primary': '#5B9BD5',        // Soft blue
+                        'primary-dark': '#4A7FA8',   // Darker soft blue
+                        'secondary': '#F4A261',      // Peachy orange
+                        'accent': '#E76F51',         // Coral
+                        'purple': '#9B8BC0',         // Soft purple
                     }
                 }
             }
@@ -27,7 +28,7 @@
             display: block;
         }
         .nav-link.active {
-            background-color: #1d4ed8;
+            background-color: #4A7FA8;
             color: white;
         }
     </style>
@@ -39,11 +40,9 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex items-center">
-                    <div class="flex-shrink-0 flex items-center">
-                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-green-500 rounded-lg flex items-center justify-center">
-                            <span class="text-white font-bold text-lg">KC</span>
-                        </div>
-                        <span class="ml-3 text-xl font-bold text-gray-900">Kids Care Inc.</span>
+                    <div class="flex-shrink-0 flex items-center gap-3">
+                        <img src="./logo.png" alt="Kids Care Inc. Logo" class="h-12 w-auto">
+                        <img src="./text.png" alt="Kids Care Inc." class="h-8 w-auto">
                     </div>
                 </div>
                 
@@ -54,7 +53,7 @@
                         <button onclick="showPage('about')" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100">About</button>
                         <button onclick="showPage('services')" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100">Services</button>
                         <button onclick="showPage('process')" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100">Getting Started</button>
-                        <button onclick="showPage('contact')" class="nav-link bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-dark">Contact</button>
+                        <button onclick="showPage('contact')" class="nav-link bg-accent text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-opacity-90">Contact</button>
                     </div>
                 </div>
                 
@@ -84,20 +83,20 @@
     <!-- HOME PAGE -->
     <div id="home" class="page-section active">
         <!-- Hero Section -->
-        <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <section class="bg-gradient-to-r from-primary to-primary-dark text-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
                         <h1 class="text-4xl md:text-5xl font-bold mb-6">Exceptional Results, One Child at a Time</h1>
                         <p class="text-xl mb-8 text-blue-100">Providing comprehensive Early Intensive Developmental and Behavioral Intervention (EIDBI) services for children with autism spectrum disorders and related conditions.</p>
                         <div class="flex flex-col sm:flex-row gap-4">
-                            <button onclick="showPage('contact')" class="bg-secondary hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors">Get Started Today</button>
-                            <button onclick="showPage('services')" class="border-2 border-white text-white hover:bg-white hover:text-blue-800 px-8 py-3 rounded-lg font-semibold text-lg transition-colors">Learn About Our Services</button>
+                            <button onclick="showPage('contact')" class="bg-secondary hover:bg-opacity-90 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors">Get Started Today</button>
+                            <button onclick="showPage('services')" class="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-3 rounded-lg font-semibold text-lg transition-colors">Learn About Our Services</button>
                         </div>
                     </div>
                     <div class="relative">
-                        <div class="bg-white rounded-lg shadow-2xl p-2">
-                            <img src="https://images.unsplash.com/photo-1516627145497-ae4099d04d94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Child therapy session" class="w-full h-80 object-cover rounded-lg">
+                        <div class="bg-white rounded-lg shadow-2xl p-8 flex items-center justify-center">
+                            <img src="./fulllogo.png" alt="Kids Care Inc." class="w-full max-w-md object-contain">
                         </div>
                     </div>
                 </div>
@@ -116,7 +115,7 @@
                     <!-- ABA Therapy -->
                     <div class="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
                         <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
                             </svg>
                         </div>
@@ -126,8 +125,8 @@
 
                     <!-- Early Intervention -->
                     <div class="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
-                        <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                             </svg>
                         </div>
@@ -138,7 +137,7 @@
                     <!-- Family Support -->
                     <div class="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
                         <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-8 h-8 text-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                             </svg>
                         </div>
@@ -148,8 +147,8 @@
 
                     <!-- Integrated Care -->
                     <div class="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
-                        <div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
-                            <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                             </svg>
                         </div>
@@ -159,8 +158,8 @@
 
                     <!-- School Readiness -->
                     <div class="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
-                        <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                            <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                             </svg>
                         </div>
@@ -198,26 +197,26 @@
                     </div>
                     
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+                        <div class="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">Assessment</h3>
                         <p class="text-gray-600">Comprehensive evaluation by our certified BCBA team to understand your child's strengths and needs.</p>
                     </div>
                     
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+                        <div class="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">Treatment Plan</h3>
                         <p class="text-gray-600">Receive a personalized treatment plan tailored to your child's specific goals and needs.</p>
                     </div>
                     
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+                        <div class="w-16 h-16 bg-purple text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">Begin Services</h3>
                         <p class="text-gray-600">Start your child's journey with our dedicated team of professionals.</p>
                     </div>
                 </div>
                 
                 <div class="text-center mt-12">
-                    <button onclick="showPage('contact')" class="bg-secondary hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors">Start Your Journey Today</button>
+                    <button onclick="showPage('contact')" class="bg-secondary hover:bg-opacity-90 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors">Start Your Journey Today</button>
                 </div>
             </div>
         </section>
@@ -229,7 +228,7 @@
                 <p class="text-xl mb-8 text-blue-100">Contact us today to learn more about how our evidence-based programs can support your child's development and your family's goals.</p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <button onclick="showPage('contact')" class="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold text-lg transition-colors">Schedule a Consultation</button>
-                    <a href="tel:(763)321-5694" class="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-3 rounded-lg font-semibold text-lg transition-colors">Call (763) 321-5694</a>
+                    <a href="tel:7633215694" class="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-3 rounded-lg font-semibold text-lg transition-colors">Call (763) 321-5694</a>
                 </div>
             </div>
         </section>
@@ -252,92 +251,49 @@
                         <p class="text-lg text-gray-700">We are committed to ensuring all children on the autism spectrum receive the support they need, when they need it, meeting them where they are and helping them progress as quickly as possible. Our mission is to empower children with autism to better express themselves, engage meaningfully with the world, and enjoy life to the fullest.</p>
                     </div>
                     
-                    <div class="bg-green-50 rounded-xl p-8">
+                    <div class="bg-orange-50 rounded-xl p-8">
                         <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Vision</h2>
                         <p class="text-lg text-gray-700">We envision a world where children on the autism spectrum have the communication skills, academic abilities, and life skills necessary to increase their everyday independence. We imagine a future where every day on the autism spectrum begins and ends with smiles.</p>
-                    </div>
-                </div>
-
-                <!-- Team Section -->
-                <div class="mb-20">
-                    <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Our Expert Team</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div class="bg-white rounded-xl shadow-lg p-6 text-center">
-                            <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Dr. Sarah Johnson" class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Dr. Sarah Johnson, BCBA-D</h3>
-                            <p class="text-primary font-semibold mb-2">Clinical Director</p>
-                            <p class="text-gray-600">Board Certified Behavior Analyst with over 15 years of experience in autism intervention and staff training.</p>
-                        </div>
-                        
-                        <div class="bg-white rounded-xl shadow-lg p-6 text-center">
-                            <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Michael Chen" class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Michael Chen, BCBA</h3>
-                            <p class="text-primary font-semibold mb-2">Lead ABA Therapist</p>
-                            <p class="text-gray-600">Specialized in early intervention and family training with 10 years of experience in autism spectrum disorders.</p>
-                        </div>
-                        
-                        <div class="bg-white rounded-xl shadow-lg p-6 text-center">
-                            <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1594824475325-7b5879af9c5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Lisa Martinez" class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Lisa Martinez, MS, CCC-SLP</h3>
-                            <p class="text-primary font-semibold mb-2">Speech-Language Pathologist</p>
-                            <p class="text-gray-600">Expert in communication disorders and assistive technology with specialization in autism spectrum disorders.</p>
-                        </div>
                     </div>
                 </div>
 
                 <!-- Credentials & Memberships -->
                 <div class="bg-gray-50 rounded-xl p-8">
                     <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Professional Memberships & Certifications</h2>
-                    <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-start">
                         <div class="text-center">
-                            <div class="bg-white rounded-lg p-4 shadow-md mb-2">
-                                <div class="h-16 bg-blue-100 rounded flex items-center justify-center">
-                                    <span class="text-blue-600 font-bold text-sm">AUSM</span>
-                                </div>
+                            <div class="bg-white rounded-lg p-4 shadow-md mb-2 h-32 flex items-center justify-center">
+                                <img src="https://ausm.org/wp-content/uploads/2023/03/AutismSociety_Secondary_Brandmark_AffiliateLockup_Minnesota_FullColor.svg" alt="AUSM Logo" class="max-h-24 max-w-full object-contain">
                             </div>
-                            <p class="text-sm text-gray-600">Autism Society of Minnesota</p>
+                            <p class="text-sm text-gray-600 h-10 flex items-center justify-center">Autism Society of Minnesota</p>
                         </div>
                         
                         <div class="text-center">
-                            <div class="bg-white rounded-lg p-4 shadow-md mb-2">
-                                <div class="h-16 bg-green-100 rounded flex items-center justify-center">
-                                    <span class="text-green-600 font-bold text-sm">ABAI</span>
-                                </div>
+                            <div class="bg-white rounded-lg p-4 shadow-md mb-2 h-32 flex items-center justify-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Association_for_Behavior_Analysis_International_logo.svg/682px-Association_for_Behavior_Analysis_International_logo.svg.png?20221210010105" alt="ABAI Logo" class="max-h-24 max-w-full object-contain">
                             </div>
-                            <p class="text-sm text-gray-600">Association for Behavior Analysis International</p>
+                            <p class="text-sm text-gray-600 h-10 flex items-center justify-center">Association for Behavior Analysis International</p>
                         </div>
                         
                         <div class="text-center">
-                            <div class="bg-white rounded-lg p-4 shadow-md mb-2">
-                                <div class="h-16 bg-purple-100 rounded flex items-center justify-center">
-                                    <span class="text-purple-600 font-bold text-sm">SABA</span>
-                                </div>
+                            <div class="bg-white rounded-lg p-4 shadow-md mb-2 h-32 flex items-center justify-center">
+                                <img src="https://iba.abainternational.org/wp-content/uploads/2023/09/saba-logo-01-1024x560.png" alt="SABA Logo" class="max-h-24 max-w-full object-contain">
                             </div>
-                            <p class="text-sm text-gray-600">Society for the Advancement of Behavior Analysis</p>
+                            <p class="text-sm text-gray-600 h-10 flex items-center justify-center">Society for the Advancement of Behavior Analysis</p>
                         </div>
                         
                         <div class="text-center">
-                            <div class="bg-white rounded-lg p-4 shadow-md mb-2">
-                                <div class="h-16 bg-yellow-100 rounded flex items-center justify-center">
-                                    <span class="text-yellow-600 font-bold text-sm">AS</span>
-                                </div>
+                            <div class="bg-white rounded-lg p-4 shadow-md mb-2 h-32 flex items-center justify-center">
+                                <img src="https://www.autismspeaks.org/themes/custom/particle/apps/drupal/logo_as.png" alt="Autism Speaks Logo" class="max-h-24 max-w-full object-contain">
                             </div>
-                            <p class="text-sm text-gray-600">Autism Speaks</p>
+                            <p class="text-sm text-gray-600 h-10 flex items-center justify-center">Autism Speaks</p>
                         </div>
                         
                         <div class="text-center">
-                            <div class="bg-white rounded-lg p-4 shadow-md mb-2">
-                                <div class="h-16 bg-red-100 rounded flex items-center justify-center">
-                                    <span class="text-red-600 font-bold text-sm">ARC</span>
-                                </div>
+                            <div class="bg-white rounded-lg p-4 shadow-md mb-2 h-32 flex items-center justify-center">
+                                <img src="https://arcminnesota.org/wp-content/themes/arc-project-access/dist/images/arc-logo-black_49f9e19e.png" alt="The Arc Minnesota Logo" class="max-h-24 max-w-full object-contain">
                             </div>
-                            <p class="text-sm text-gray-600">The Arc Minnesota</p>
+                            <p class="text-sm text-gray-600 h-10 flex items-center justify-center">The Arc Minnesota</p>
                         </div>
                     </div>
                 </div>
@@ -355,12 +311,13 @@
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">We provide comprehensive, evidence-based interventions designed to help children with autism spectrum disorders develop essential skills and reach their full potential.</p>
                 </div>
 
-                <!-- ABA Therapy -->
-                <div class="mb-20">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Main Services -->
+                <div class="space-y-16 mb-20">
+                    <!-- Service 1: ABA Therapy -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center p-8">
                         <div>
                             <h2 class="text-3xl font-bold text-gray-900 mb-6">Applied Behavior Analysis (ABA) Therapy</h2>
-                            <p class="text-lg text-gray-700 mb-6">Our ABA therapy program is the cornerstone of our services, utilizing evidence-based strategies to help children develop communication skills, social behaviors, and reduce challenging behaviors. Our certified Board Certified Behavior Analysts (BCBAs) and Registered Behavior Technicians (RBTs) work closely with each child to create individualized treatment plans.</p>
+                            <p class="text-lg text-gray-700 mb-6">Our ABA therapy program is the cornerstone of our services, utilizing evidence-based strategies to help children develop communication skills, social behaviors, and reduce challenging behaviors. Our certified Board Certified Behavior Analysts (BCBAs), Qualified Supervising Professionals (QSPs), and Behavior Technicians (BTs) work closely with each child to create individualized treatment plans.</p>
                             <ul class="space-y-3 text-gray-700">
                                 <li class="flex items-start">
                                     <div class="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -381,16 +338,14 @@
                             </ul>
                         </div>
                         <div class="relative">
-                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ABA therapy session" class="rounded-xl shadow-lg">
+                            <img src="https://img.freepik.com/free-photo/side-view-child-tutor-home-learning_23-2148524526.jpg?t=st=1764025996~exp=1764029596~hmac=7121a3c12256649e9bf881232fea5d1c4cffcfe9c41b5bfdb0bccac935bcde9f&w=740" alt="ABA therapy session" class="rounded-xl shadow-lg w-full h-80 object-cover">
                         </div>
                     </div>
-                </div>
 
-                <!-- EIDBI Services -->
-                <div class="mb-20 bg-gray-50 rounded-xl p-8">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Service 2: EIDBI -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-gray-50 rounded-xl p-8">
                         <div class="order-2 lg:order-1">
-                            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Early intervention" class="rounded-xl shadow-lg">
+                            <img src="https://img.freepik.com/free-photo/close-up-woman-holding-notebook_23-2148928846.jpg?t=st=1764025760~exp=1764029360~hmac=3a07d9fa80656275ee3c97ec7d450e9cb8f8f51e865c5ef64fade64b5280cbad&w=740" alt="Early intervention" class="rounded-xl shadow-lg w-full h-80 object-cover">
                         </div>
                         <div class="order-1 lg:order-2">
                             <h2 class="text-3xl font-bold text-gray-900 mb-6">Early Intensive Developmental & Behavioral Intervention (EIDBI)</h2>
@@ -415,59 +370,160 @@
                             </ul>
                         </div>
                     </div>
-                </div>
 
-                <!-- Additional Services -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-                    <div class="bg-white border-2 border-gray-200 rounded-xl p-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Speech & Language Therapy</h3>
-                        <p class="text-gray-700 mb-4">Comprehensive speech and language services to improve communication skills, including:</p>
-                        <ul class="space-y-2 text-gray-600">
-                            <li>• Expressive and receptive language development</li>
-                            <li>• Alternative communication methods (AAC)</li>
-                            <li>• Social communication skills</li>
-                            <li>• Articulation and phonological intervention</li>
-                        </ul>
+                    <!-- Service 3: Speech & Language -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center p-8">
+                        <div>
+                            <h2 class="text-3xl font-bold text-gray-900 mb-6">Speech & Language Therapy</h2>
+                            <p class="text-lg text-gray-700 mb-2">Comprehensive speech and language services to improve communication skills. Services provided by contracted specialists conducting sessions in our center.</p>
+                            <p class="text-gray-600 text-sm italic mb-6">Outsourced - Contracted sessions in center</p>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <div class="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <span>Expressive and receptive language development</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <span>Alternative communication methods (AAC)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <span>Social communication skills</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <span>Articulation and phonological intervention</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="relative">
+                            <img src="https://img.freepik.com/free-photo/psychologist-helping-little-girl-speech-therapy_23-2149113813.jpg?t=st=1764025183~exp=1764028783~hmac=f3213c240947f410cd74b27ca030286023495e4da81235c588bd6914441e9cd5" alt="Speech therapy" class="rounded-xl shadow-lg w-full h-80 object-cover">
+                        </div>
                     </div>
-                    
-                    <div class="bg-white border-2 border-gray-200 rounded-xl p-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Occupational Therapy</h3>
-                        <p class="text-gray-700 mb-4">Specialized OT services focusing on daily living skills and sensory integration:</p>
-                        <ul class="space-y-2 text-gray-600">
-                            <li>• Fine and gross motor skill development</li>
-                            <li>• Sensory processing interventions</li>
-                            <li>• Self-care and independence skills</li>
-                            <li>• School readiness preparation</li>
-                        </ul>
+
+                    <!-- Service 4: Occupational Therapy -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-gray-50 rounded-xl p-8">
+                        <div class="order-2 lg:order-1">
+                            <img src="https://img.freepik.com/free-photo/boy-doing-occupational-therapy-session-with-psychologist_23-2149091563.jpg?t=st=1764025513~exp=1764029113~hmac=fa8671b91b97ae8535a316158e00281b7fb0a567d53c487a28bb1b3b55a9000c&w=740" alt="Occupational therapy" class="rounded-xl shadow-lg w-full h-80 object-cover">
+                        </div>
+                        <div class="order-1 lg:order-2">
+                            <h2 class="text-3xl font-bold text-gray-900 mb-6">Occupational Therapy</h2>
+                            <p class="text-lg text-gray-700 mb-2">Specialized OT services focusing on daily living skills and sensory integration. Services provided by contracted specialists conducting sessions in our center.</p>
+                            <p class="text-gray-600 text-sm italic mb-6">Outsourced - Contracted sessions in center</p>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <div class="w-2 h-2 bg-purple rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <span>Fine and gross motor skill development</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-2 h-2 bg-purple rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <span>Sensory processing interventions</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-2 h-2 bg-purple rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <span>Self-care and independence skills</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-2 h-2 bg-purple rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <span>School readiness preparation</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    
-                    <div class="bg-white border-2 border-gray-200 rounded-xl p-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Family Training & Support</h3>
-                        <p class="text-gray-700 mb-4">Empowering families with the tools and strategies they need:</p>
-                        <ul class="space-y-2 text-gray-600">
-                            <li>• Parent education and training sessions</li>
-                            <li>• Home-based strategy implementation</li>
-                            <li>• Sibling support programs</li>
-                            <li>• Crisis intervention support</li>
-                        </ul>
+
+                    <!-- Service 5: Family Training -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center p-8">
+                        <div>
+                            <h2 class="text-3xl font-bold text-gray-900 mb-6">Family Training & Support</h2>
+                            <p class="text-lg text-gray-700 mb-6">Empowering families with the tools and strategies they need to support their child's development.</p>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <div class="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <span>Parent education and training sessions</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <span>Home-based strategy implementation</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <span>Sibling support programs</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <span>Crisis intervention support</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="relative">
+                            <img src="https://img.freepik.com/free-photo/portrait-african-american-grandmother-mother-son-spending-good-time-together-home-family-lifestyle-concept_58466-14446.jpg?t=st=1764025412~exp=1764029012~hmac=4faa2cf4d8818539f34ca7c450988fb55073dce039ac1a76bf0ebbb5cac6abb0&w=740" alt="Family support" class="rounded-xl shadow-lg w-full h-80 object-cover">
+                        </div>
                     </div>
-                    
-                    <div class="bg-white border-2 border-gray-200 rounded-xl p-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">School Collaboration</h3>
-                        <p class="text-gray-700 mb-4">Working with educational teams for seamless transitions:</p>
-                        <ul class="space-y-2 text-gray-600">
-                            <li>• IEP/504 plan consultation</li>
-                            <li>• Classroom observation and support</li>
-                            <li>• Teacher training and education</li>
-                            <li>• Transition planning and support</li>
-                        </ul>
+
+                    <!-- Service 6: School Collaboration -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-gray-50 rounded-xl p-8">
+                        <div class="order-2 lg:order-1">
+                            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="School collaboration" class="rounded-xl shadow-lg w-full h-80 object-cover">
+                        </div>
+                        <div class="order-1 lg:order-2">
+                            <h2 class="text-3xl font-bold text-gray-900 mb-6">School Collaboration</h2>
+                            <p class="text-lg text-gray-700 mb-6">Working with educational teams for seamless transitions and ongoing support.</p>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <div class="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <span>IEP/504 plan consultation</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <span>Classroom observation and support</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <span>Teacher training and education</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <span>Transition planning and support</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Service 7: Transportation -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center p-8">
+                        <div>
+                            <h2 class="text-3xl font-bold text-gray-900 mb-6">Transportation Services</h2>
+                            <p class="text-lg text-gray-700 mb-6">Convenient transportation to and from therapy sessions, making it easier for families to access our services.</p>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <div class="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <span>Door-to-door transportation service</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <span>Fully covered by insurance - no out-of-pocket costs</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <span>Safe and reliable transport</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <span>Flexible scheduling to meet family needs</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1750210506021-05f1f5bdad23?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Transportation services" class="rounded-xl shadow-lg w-full h-80 object-cover">
+                        </div>
                     </div>
                 </div>
 
                 <!-- Insurance Information -->
                 <div class="bg-blue-50 rounded-xl p-8 text-center">
                     <h2 class="text-3xl font-bold text-gray-900 mb-6">Insurance & Coverage</h2>
-                    <p class="text-lg text-gray-700 mb-6">We accept most major insurance plans and work with families to ensure access to necessary services. Our team will help verify your benefits and navigate the authorization process.</p>
+                    <p class="text-lg text-gray-700 mb-4">We accept most major insurance plans including Health Partners, UCare, BlueCross BlueShield, Medica, and MA/MHCP.</p>
+                    <p class="text-lg text-gray-700 mb-6"><strong>All services, including transportation, are fully covered by insurance with no out-of-pocket costs.</strong> Our team will help verify your benefits and navigate the authorization process.</p>
                     <button onclick="showPage('contact')" class="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors">Contact Us for Insurance Verification</button>
                 </div>
             </div>
@@ -510,14 +566,14 @@
                             </ul>
                         </div>
                         <div class="relative">
-                            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Consultation" class="rounded-xl shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Consultation" class="rounded-xl shadow-lg w-full h-80 object-cover">
                         </div>
                     </div>
 
                     <!-- Step 2 -->
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-gray-50 rounded-xl p-8">
                         <div class="order-2 lg:order-1">
-                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Assessment" class="rounded-xl shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1758691463331-2ac00e6f676f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Assessment" class="rounded-xl shadow-lg w-full h-80 object-cover">
                         </div>
                         <div class="order-1 lg:order-2">
                             <div class="flex items-center mb-6">
@@ -566,32 +622,32 @@
                             </ul>
                         </div>
                         <div class="relative">
-                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Treatment planning" class="rounded-xl shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Treatment planning" class="rounded-xl shadow-lg w-full h-80 object-cover">
                         </div>
                     </div>
 
                     <!-- Step 4 -->
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-gray-50 rounded-xl p-8">
                         <div class="order-2 lg:order-1">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Service delivery" class="rounded-xl shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1758687126441-faf2b924b390?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Service delivery" class="rounded-xl shadow-lg w-full h-80 object-cover">
                         </div>
                         <div class="order-1 lg:order-2">
                             <div class="flex items-center mb-6">
-                                <div class="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center text-xl font-bold mr-4">4</div>
+                                <div class="w-12 h-12 bg-purple text-white rounded-full flex items-center justify-center text-xl font-bold mr-4">4</div>
                                 <h2 class="text-3xl font-bold text-gray-900">Service Implementation</h2>
                             </div>
                             <p class="text-lg text-gray-700 mb-6">Your child begins receiving services with our team of qualified professionals. We maintain regular communication with your family and continuously monitor progress to ensure optimal outcomes.</p>
                             <ul class="space-y-3 text-gray-700">
                                 <li class="flex items-start">
-                                    <div class="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <div class="w-2 h-2 bg-purple rounded-full mt-2 mr-3 flex-shrink-0"></div>
                                     <span>Dedicated therapy team assignment</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <div class="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <div class="w-2 h-2 bg-purple rounded-full mt-2 mr-3 flex-shrink-0"></div>
                                     <span>Regular progress monitoring and data collection</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <div class="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <div class="w-2 h-2 bg-purple rounded-full mt-2 mr-3 flex-shrink-0"></div>
                                     <span>Ongoing family communication and support</span>
                                 </li>
                             </ul>
@@ -605,7 +661,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
                             <h3 class="text-xl font-semibold text-gray-900 mb-3">How long does the assessment process take?</h3>
-                            <p class="text-gray-700">The comprehensive assessment typically takes 4-6 hours and may be completed over multiple sessions to ensure your child is comfortable and engaged.</p>
+                            <p class="text-gray-700">The comprehensive assessment typically takes 30-60 minutes and is usually completed over one session.</p>
                         </div>
                         
                         <div>
@@ -630,7 +686,7 @@
                     <h2 class="text-3xl font-bold text-gray-900 mb-6">Ready to Get Started?</h2>
                     <p class="text-xl text-gray-600 mb-8">Contact us today to begin your child's journey toward greater independence and success.</p>
                     <button onclick="showPage('contact')" class="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors mr-4">Schedule Your Consultation</button>
-                    <a href="tel:(763)321-5694" class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors">Call (763) 321-5694</a>
+                    <a href="tel:7633215694" class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors inline-block">Call (763) 321-5694</a>
                 </div>
             </div>
         </section>
@@ -686,25 +742,24 @@
                                 </div>
                                 <div>
                                     <h3 class="text-xl font-semibold text-gray-900 mb-1">Address</h3>
-                                    <p class="text-gray-600">2021 E Hennepin Ave #187<br>Minneapolis, MN 55413</p>
+                                    <p class="text-gray-600">1400 Energy Park Dr Ste 18<br>Saint Paul, MN 55108</p>
                                 </div>
                             </div>
                             
                             <div class="flex items-start">
-                                <div class="w-12 h-12 bg-purple-600 text-white rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <div class="w-12 h-12 bg-purple text-white rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                     </svg>
                                 </div>
                                 <div>
                                     <h3 class="text-xl font-semibold text-gray-900 mb-1">Office Hours</h3>
-                                    <p class="text-gray-600">Monday - Friday: 8:00 AM - 4:15 PM</p>
-                                    <p class="text-gray-600">Weekends: By appointment only</p>
+                                    <p class="text-gray-600">Monday - Friday: 8:00 AM - 7:00 PM</p>
+                                    <p class="text-gray-600">Saturday - Sunday: 9:00 AM - 4 PM</p>
+                                    <p class="text-gray-600 text-sm">(Weekends only during school-year)</p>
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
 
                     <!-- Contact Action Center -->
@@ -714,7 +769,7 @@
                         
                         <!-- Primary Phone -->
                         <div class="mb-8">
-                            <a href="tel:(763)321-5694" class="inline-block bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-2xl transition-colors shadow-lg">
+                            <a href="tel:7633215694" class="inline-block bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-2xl transition-colors shadow-lg">
                                 📞 (763) 321-5694
                             </a>
                             <p class="text-blue-100 mt-2">Primary Line - New Client Inquiries</p>
@@ -767,7 +822,8 @@
                 <div class="mt-16">
                     <h2 class="text-3xl font-bold text-gray-900 text-center mb-8">Find Us</h2>
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2821.624381742551!2d-93.22628372224892!3d44.99194106482254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b32df737d2d1b1%3A0x9037648eaa663ec5!2sKids%20Care%20Inc!5e0!3m2!1sen!2sus!4v1756134601352!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full"></iframe>
+                        <!-- UPDATE THIS WITH CORRECT GOOGLE MAPS EMBED FOR: 1400 Energy Park Dr Ste 18, Saint Paul, MN 55108 -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.234!2d-93.1589!3d44.9833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b32c54!2s1400%20Energy%20Park%20Dr%20Suite%2018%2C%20Saint%20Paul%2C%20MN%2055108!5e0!3m2!1sen!2sus!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full"></iframe>
                     </div>
                 </div>
             </div>
@@ -780,11 +836,9 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <!-- Company Info -->
                 <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-green-500 rounded-lg flex items-center justify-center mr-3">
-                            <span class="text-white font-bold text-lg">KC</span>
-                        </div>
-                        <span class="text-xl font-bold">Kids Care Inc.</span>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="./logo.png" alt="Kids Care Inc. Logo" class="h-10 w-auto">
+                        <img src="./text.png" alt="Kids Care Inc." class="h-7 w-auto">
                     </div>
                     <p class="text-gray-300 mb-4">Providing exceptional Early Intensive Developmental and Behavioral Intervention services to help children with autism spectrum disorders reach their full potential.</p>
                     <p class="text-gray-400 text-sm">© 2025 Kids Care Inc. All Rights Reserved.</p>
@@ -808,7 +862,7 @@
                     <ul class="space-y-2 text-gray-300">
                         <li>(763) 321-5694</li>
                         <li>info@kidscareinc.com</li>
-                        <li>2021 E Hennepin Ave #187<br>Minneapolis, MN 55413</li>
+                        <li>1400 Energy Park Dr Ste 18<br>Saint Paul, MN 55108</li>
                     </ul>
                 </div>
             </div>
@@ -820,7 +874,6 @@
     </footer>
 
     <script>
-        // Handle mobile menu and navigation
         function showPage(pageId) {
             // Hide all pages
             const pages = document.querySelectorAll('.page-section');
